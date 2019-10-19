@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import androidx.appcompat.app.ActionBar
 import androidx.viewpager.widget.PagerAdapter
+import kotlinx.android.synthetic.main.actionbar_title.*
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -18,6 +19,8 @@ class MainActivity : AppCompatActivity() {
         setupCarousel()
         supportActionBar?.elevation = 0f
         supportActionBar?.displayOptions = ActionBar.DISPLAY_SHOW_CUSTOM
+        supportActionBar?.setCustomView(R.layout.actionbar_title)
+        tvTitle.text = getString(R.string.app_name)
     }
 
     private fun setupCarousel() {
